@@ -399,14 +399,14 @@ const Home: FC<any> = ({ page }) => {
     width: sm ? 50 : 32,
     height: sm ? 50 : 32,
   }
-  
+
   // const { data:page, error } = getPagesCategories(1);
   // if(error) return <h1>Something wrong happened</h1>
-	// if (!page ) return <h1>Loading ...</h1>
+  // if (!page ) return <h1>Loading ...</h1>
 
   // const page = data;
   // const page: PageEntity = useResource(data.detailShape(), {})
-  
+
   // const page: PageEntity = useResource(PageEntity.detailShape(), { id: 1 })
 
   const icons = [Cube1, Cube2, Cube3, Cube4]
@@ -509,7 +509,7 @@ const Home: FC<any> = ({ page }) => {
   }
 
   const BuildingWithUsSection = () => {
-  const buildingWithUsIcons = [IconImage1, IconImage2, IconImage3, IconImage4]
+    const buildingWithUsIcons = [IconImage1, IconImage2, IconImage3, IconImage4]
 
     return (
       <Row className={'section build-with-us'}>
@@ -561,7 +561,7 @@ const Home: FC<any> = ({ page }) => {
                     className="build-with-us-background-image first floating-card-1 desktop"
                   >
                   </Image> */}
-                  {/* <img src="https://nymcard.com/static/media/build-with-us-desktop-1.d4c0e6e5.svg" className="build-with-us-background-image first floating-card-1 desktop" alt="" /> */}
+                    {/* <img src="https://nymcard.com/static/media/build-with-us-desktop-1.d4c0e6e5.svg" className="build-with-us-background-image first floating-card-1 desktop" alt="" /> */}
                   </div>
                   <img alt={''} src={buildWithUsDesktop2} className={'build-with-us-background-image second desktop'} />
                 </>
@@ -579,8 +579,8 @@ const Home: FC<any> = ({ page }) => {
     <Page title={'Home'}>
       {isModalOpen && <FormModal onClose={onModalClose} title={modalFormData.title} text={modalFormData.text} />}
       <div className='home-top-background-wrapper'>
-  
-      {xl && <div className='home-top-movable-area' />}
+
+        {xl && <div className='home-top-movable-area' />}
         {xs ? (
           <HomeTopBackgroundDesktop className='home-top-background-image desktop' />
         ) : (
@@ -591,10 +591,7 @@ const Home: FC<any> = ({ page }) => {
             <Col md={16} lg={16} xl={16} xxl={12}>
               <Hero data={page.sections[0]} />
             </Col>
-          </Row>
-        </Container>
-         
-        <Container>
+          </Row> 
           <Row className={'section what-we-do'}>
             <Col width={160} xs={24} xl={4} className='category-col category-col-center'>
               <Text.Category size={'md'} color={'secondary'}>
@@ -659,10 +656,10 @@ const Home: FC<any> = ({ page }) => {
             </Col>
           </Row>
         </Container>
-      
-      
+
+
       </div>
-      
+
       <Container fluid className={'inverse modern'}>
         <Container className={'section'}>
           <Col>
@@ -775,7 +772,7 @@ const Home: FC<any> = ({ page }) => {
                   </Row>
 
                   <Row>
-                    <div className='animated-modern-part'>
+                    <Col className='animated-modern-part'>
                       {modernCardData.acordion.map((item, index) => {
                         return (
                           <div
@@ -860,7 +857,7 @@ const Home: FC<any> = ({ page }) => {
                           </div>
                         )
                       })}
-                    </div>
+                    </Col>
                   </Row>
 
                   <Row>
@@ -875,11 +872,11 @@ const Home: FC<any> = ({ page }) => {
           </Col>
         </Container>
       </Container>
-      
+
       <Container>
         <BuildingWithUsSection />
       </Container>
-      
+
       <Container fluid className='light-grey-container'>
         <Container>
           <Row className={'section we-build-more'}>
