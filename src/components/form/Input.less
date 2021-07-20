@@ -1,0 +1,77 @@
+//@import 'src/index';
+
+@default-input-border-color: rgba(44, 54, 90, 0.4);
+@default-label-color: rgba(44, 54, 90, 0.8);
+
+.input-wrapper {
+  position: relative;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 22px;
+  font-family: @tertiary-font-family;
+
+  .inputfield {
+    width: 100%;
+    color: @primary-dark-color;
+    line-height: 150%;
+    border-bottom: 1px solid @default-input-border-color;
+    border-radius: 0;
+    &-filled {
+      border-bottom: 1px solid @primary-dark-color;
+    }
+  }
+  .label {
+    line-height: 150%;
+    transition: transform 0.3s;
+    &-touched {
+      transform: translateY(-100%);
+    }
+  }
+
+  .error-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: @secondary-color;
+    line-height: 150%;
+  }
+  &-small {
+    .inputfield {
+      font-size: 11px;
+    }
+    .error-message {
+      font-size: 11px;
+    }
+  }
+  &-regular {
+    .label {
+      position: absolute;
+      color: @default-label-color;
+      font-size: 16px;
+      text-transform: capitalize;
+      &-touched {
+        font-size: 12px;
+      }
+    }
+    .inputfield {
+      font-size: 16px;
+    }
+    .error-message {
+      font-size: 14px;
+    }
+  }
+
+  &-error {
+    .inputfield {
+      border-bottom: 1px solid @secondary-color !important;
+    }
+  }
+
+  .inputfield:focus {
+    border-bottom: 1px solid @tertiary-color;
+  }
+}

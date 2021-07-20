@@ -1,0 +1,137 @@
+//@import '../../index';
+
+.header-container.inverse {
+  svg path:not(:last-child) {
+    fill: white;
+  }
+}
+
+.menu {
+  &-horizontal {
+    display: flex;
+    align-items: center;
+  }
+
+  &-item:not(:last-child) {
+    padding-right: 32px;
+  }
+}
+
+.ant-dropdown-menu-item-group {
+  margin: 15px -16px -15px;
+  padding: 12px;
+  background-color: #fafafa;
+}
+
+@menu-item-font-size: 12px;
+.large-links-wrapper {
+  display: grid;
+  grid-column-gap: 36px;
+  grid-template-columns: repeat(2, min-content);
+
+  .neo-iraq {
+    margin-right: 4px;
+    color: @link-color;
+    font-weight: normal;
+    font-size: 9px;
+    font-family: @secondary-font-family;
+    font-style: normal;
+    opacity: 0.6;
+  }
+
+  .press-room-link {
+    padding: 0;
+    color: @link-color;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: @secondary-font-family;
+  }
+}
+
+.ant-menu {
+  &-horizontal {
+    line-height: 1;
+  }
+}
+
+.ant-dropdown {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.06);
+
+  .ant-dropdown-menu {
+    padding: 12px 16px;
+
+    .ant-dropdown-menu-item:hover {
+      background-color: transparent;
+    }
+
+    .text-link {
+      padding: 8px;
+      overflow: hidden;
+      color: @link-color;
+      font-size: 12px;
+      font-family: @secondary-font-family;
+      line-height: 24px;
+
+      &:nth-child(1) {
+        padding-right: 16px;
+      }
+
+      &:nth-child(0) {
+        padding-left: 16px;
+      }
+    }
+
+    .ant-dropdown-menu-item:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.pages-menu-item {
+  display: block;
+  color: @link-color;
+  font-size: 14px;
+  font-family: @tertiary-font-family;
+  cursor: pointer;
+}
+
+.category-item {
+  &:hover {
+    color: @secondary-color !important;
+
+    a {
+      color: @secondary-color !important;
+    }
+  }
+
+  &:active {
+    color: @press-color !important;
+  }
+}
+
+.category-paragraph:hover .pages-menu-item {
+  color: @secondary-color !important;
+}
+
+.category-paragraph:active .pages-menu-item {
+  color: #931f1b !important;
+}
+
+.pages-menu-item-inverse {
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-family: @tertiary-font-family;
+  cursor: pointer;
+}
+
+.company-last-item {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  .category-last-item {
+    max-width: 240px;
+  }
+}

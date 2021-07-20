@@ -1,0 +1,230 @@
+@import 'Buttons.less';
+
+.main-button-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 14px;
+  background-color: @button-default-color;
+  border-radius: $height/2;
+  transition: background-color @button-transition-duration;
+}
+
+.main-button {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity @button-transition-duration;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  .main-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &.reversed {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .main-button-text {
+    line-height: 100%;
+  }
+
+  &.small {
+    height: 26px;
+
+    .main-button-text {
+      line-height: $height;
+    }
+  }
+
+  &.medium {
+    height: 32px;
+
+    .main-button-text {
+      line-height: $height;
+    }
+  }
+
+  &.large {
+    height: 40px;
+
+    .main-button-text {
+      line-height: $height;
+    }
+  }
+
+  &.ghost,
+  &.ghost-dark {
+    svg {
+      margin-left: 7px;
+    }
+
+    .reversed {
+      svg {
+        margin-right: 7px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.ghost {
+    .main-button-text {
+      color: @button-default-color;
+      font-weight: 600;
+      font-family: @primary-font-family;
+      text-transform: uppercase;
+    }
+
+    svg path {
+      fill: @button-default-color;
+    }
+  }
+
+  &.default {
+    padding: 4px 20px;
+    background-color: @button-default-color;
+    border-radius: 86px;
+
+    .main-button-text {
+      color: #fff;
+      font-weight: 600;
+      font-family: @primary-font-family;
+      text-transform: uppercase;
+    }
+
+    &:active {
+      background-color: @button-default-focus-color;
+      opacity: 1;
+    }
+  }
+
+  &.circle {
+    .main-button-text {
+      color: @button-default-color;
+      font-weight: 500;
+      font-family: @primary-font-family;
+    }
+
+    &:active {
+      color: @button-default-focus-color;
+      opacity: 1;
+
+      .main-button-circle {
+        background-color: @button-default-focus-color;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.ghost-dark {
+    .main-button-text {
+      color: @link-color;
+      font-weight: 600;
+      font-family: @primary-font-family;
+      text-transform: uppercase;
+      transition: color @button-transition-duration;
+    }
+
+    svg path {
+      transition: fill @button-transition-duration;
+      fill: @link-color;
+    }
+
+    &:hover {
+      .main-button-text {
+        color: @button-default-color;
+        opacity: 1;
+      }
+
+      svg path {
+        fill: @button-default-color;
+      }
+    }
+
+    &:active {
+      .main-button-text {
+        color: @button-default-focus-color;
+      }
+
+      svg path {
+        fill: @button-default-focus-color;
+      }
+    }
+  }
+
+  &.ghost:active {
+    .main-button-text {
+      color: @button-default-focus-color;
+    }
+
+    svg path {
+      fill: @button-default-focus-color;
+    }
+  }
+
+  &.medium.default,
+  &.medium.ghost {
+    font-size: 14px;
+  }
+
+  &.medium.circle {
+    font-size: 17px;
+  }
+
+  &.small.ghost {
+    font-size: 12px;
+  }
+
+  &.disabled {
+    opacity: 0.4 !important;
+
+    &.default {
+      &:active {
+        background-color: @button-default-color;
+      }
+    }
+
+    &.circle {
+      .main-button-text {
+        color: @button-default-color;
+      }
+
+      .main-button-circle {
+        background-color: @button-default-color;
+      }
+    }
+
+    &.ghost {
+      &:active,
+      &:hover {
+        .main-button-text {
+          color: @button-default-color;
+        }
+
+        svg path {
+          fill: @button-default-color;
+        }
+      }
+    }
+
+    &.ghost-dark {
+      &:active,
+      &:hover {
+        .main-button-text {
+          color: @link-color;
+        }
+
+        svg path {
+          fill: @link-color;
+        }
+      }
+    }
+  }
+}

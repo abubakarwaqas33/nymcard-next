@@ -1,0 +1,60 @@
+@import '../theme/variables.less';
+
+.soon-subtitle {
+  margin-bottom: 7px;
+  color: #2d365c;
+  font-weight: bold;
+  font-size: 8px;
+  font-family: @secondary-font-family;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.3;
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.soon-title {
+  margin-bottom: 40px;
+  color: #2d365c;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  @media (min-width: 768px) {
+    font-size: 80px;
+  }
+}
+
+.soon-text {
+  color: #2d365c;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: @primary-font-family;
+  font-style: normal;
+  opacity: 0.9;
+}
+
+.coming-soon-form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @screen-sm-min) {
+    flex-direction: row;
+  }
+  .input-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 0 0 35px;
+    @media (min-width: @screen-sm-min) {
+      margin: 0 20px 0 0;
+    }
+    .input {
+      align-self: flex-end;
+      @media (min-width: @screen-sm-min) {
+        margin: -20px 0;
+      }
+    }
+  }
+}

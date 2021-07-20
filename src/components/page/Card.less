@@ -1,0 +1,140 @@
+@import '../../theme/index.less';
+
+@light-card-color: rgba(230, 240, 252, 0.27);
+@dark-card-color: #232e53;
+@gradient-card-color: linear-gradient(201.76deg, #f8f8f8 19.36%, #f0f0f0 143.44%);
+.card {
+  border-radius: 5px;
+
+  svg {
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+
+  &-small {
+    svg {
+      margin-bottom: 21px;
+
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 60px;
+      }
+    }
+
+    .text-title {
+      margin-bottom: 8px;
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &-medium {
+    svg {
+      margin-bottom: 7px;
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 18px;
+      }
+    }
+
+    .text-title {
+      margin-bottom: 6px;
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &-large {
+    svg {
+      margin-bottom: 25px;
+
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 90px;
+      }
+    }
+
+    .text-title {
+      margin-bottom: 7px;
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .text-paragraph:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-light {
+    background-color: @light-card-color;
+  }
+
+  &-dark {
+    background-color: @dark-card-color;
+  }
+
+  &-numeric {
+    .numeric-title-wrapper {
+      margin-bottom: 5px;
+
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 6px;
+      }
+    }
+
+    .text-title {
+      margin-bottom: 8px;
+      @media (min-width: @screen-sm-min) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &-gradient {
+    background: @gradient-card-color;
+  }
+
+  &-gradient.card-small,
+  &-light.card-small,
+  &-dark.card-small {
+    padding: 16px 16px 28px;
+
+    @media (min-width: @screen-sm-min) {
+      padding: 50px 30px 30px;
+    }
+  }
+
+  &-gradient.card-medium,
+  &-light.card-medium,
+  &-dark.card-medium {
+    padding: 16px;
+
+    @media (min-width: @screen-sm-min) {
+      padding: 50px;
+    }
+  }
+
+  &-gradient.card-large,
+  &-light.card-large,
+  &-dark.card-large {
+    padding: 16px 19px 24px;
+
+    @media (min-width: @screen-sm-min) {
+      padding: 80px 40px 40px;
+    }
+  }
+
+  .visa-logo {
+    display: inline-block;
+    width: 40px;
+    height: 13px;
+    background-color: transparent;
+    background-image: url(../../../public/assets/icons/visa-logo.svg);
+    border: none;
+    outline: none;
+  }
+  .openapi-img {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,110 @@
+@import '../../theme/index.less';
+
+.payment-partner {
+  overflow-x: hidden;
+
+  .payment-partner-content {
+    margin-bottom: 48px;
+    @media (min-width: @screen-md-min) {
+      margin-bottom: 72px;
+    }
+  }
+
+  .payment-partner-pictures {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 40px;
+    @media (min-width: @screen-md-min) {
+      display: block;
+      height: 100%;
+      margin-top: unset;
+    }
+
+    .payment-partner-neo-card {
+      width: 100%;
+      max-width: 232px;
+      height: 144px;
+      @media (min-width: @screen-md-min) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 83%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .payment-partner-video {
+      position: absolute;
+      bottom: 33px;
+      left: 5vw;
+      width: 106px;
+      cursor: pointer;
+      transition: opacity, transform 0.5s;
+      @media (min-width: @screen-xs-min) {
+        left: 15vw;
+      }
+      @media (min-width: @screen-md-min) {
+        bottom: 55px;
+        left: 0;
+        width: 35%;
+      }
+
+      &.active {
+        transform: scale(2.5) translate(50px, -50px);
+        opacity: 0;
+      }
+    }
+  }
+
+  .payment-partner-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+
+    @media (min-width: @screen-lg-min) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .payment-partner-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .partners-slider {
+    &.swiper-container {
+      max-width: 140px;
+      margin-left: unset;
+      overflow: visible;
+    }
+
+    .swiper-slide {
+      &.partners-slide {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        max-width: 140px;
+        height: 52px;
+        opacity: 0.18;
+        filter: saturate(0.2);
+
+        .partners-slide-image {
+          max-width: 138px;
+          object-fit: contain;
+        }
+      }
+
+      &-active {
+        &.partners-slide {
+          opacity: 1;
+          filter: saturate(1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+@import '../../theme/index.less';
+
+.getting-started-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: @screen-lg-min) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .info-box {
+    display: flex;
+    align-items: center;
+    .info-item {
+      position: relative;
+      padding-left: 26px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+      }
+    }
+
+    .read-time {
+      margin-right: 17px;
+      padding-right: 26px;
+
+      &::before {
+        background-image: url('../../assets/icons/clock-icon.svg');
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 14px;
+        background-color: #c2c5d0;
+        transform: translateY(-50%);
+        content: '';
+      }
+    }
+
+    .statistic {
+      &::before {
+        background-image: url('../../assets/icons/chart-icon.svg');
+      }
+    }
+  }
+}
+
+#documentation {
+  h2 {
+    margin: 16px 0;
+    color: @primary-dark-color;
+    font-size: 28px;
+    font-family: @secondary-font-family;
+    line-height: 1.5;
+  }
+
+  h3 {
+    margin: 8px 0;
+    color: @primary-dark-color;
+    font-size: 20px;
+    font-family: @secondary-font-family;
+    line-height: 1.5;
+  }
+
+  h4 {
+    margin: 8px 0;
+    color: @primary-dark-color;
+    font-size: 16px;
+    font-family: @secondary-font-family;
+  }
+
+  p {
+    margin: 8px 0;
+    color: @primary-dark-color;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+
+  ul,
+  ol {
+    padding: 0 0 0 24px;
+
+    li {
+      padding: 8px 0;
+      color: @primary-dark-color;
+      line-height: 1.3;
+    }
+  }
+
+  ul {
+    li {
+      list-style-type: square;
+    }
+
+    li::marker {
+      color: @secondary-color;
+    }
+  }
+
+  img {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  blockquote {
+    display: inline-block;
+    width: 100%;
+    margin: 16px 0;
+    padding: 8px;
+    background-color: #fafafa;
+
+    p {
+      font-size: 12px;
+      font-family: monospace;
+    }
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #fafafa;
+  }
+
+  table {
+    width: 100%;
+    padding: 8px 0;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    thead > tr > th,
+    tbody > tr > td,
+    tfoot > tr > th,
+    tfoot > tr > td {
+      position: relative;
+      padding: 8px;
+      overflow-wrap: break-word;
+      border-color: #e0e0e0;
+    }
+  }
+}

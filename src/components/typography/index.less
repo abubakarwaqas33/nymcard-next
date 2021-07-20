@@ -1,0 +1,142 @@
+@import '../../theme/variables.less';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  font-family: @primary-font-family;
+
+  &.ant-scrolling-effect {
+    overflow: visible !important;
+  }
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  width: 100%;
+  min-height: 100%;
+}
+
+header,
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+.inverse {
+  background: @primary-dark-color;
+
+  .text-color-primary {
+    color: @primary-light-color;
+  }
+}
+
+.light-grey-container {
+  overflow-x: hidden;
+  background-color: @primary-medium-color;
+}
+
+.modern {
+  overflow-x: hidden;
+  // background-image: url('../../assets/images/modern-card-image.svg');
+  background-repeat: no-repeat;
+  background-position-x: -10%;
+  background-position-y: 55vw;
+  background-size: 170vw;
+
+  @media (min-width: @screen-xxs-min) {
+    background-position-y: 50vw;
+    background-size: 150vw;
+  }
+
+  @media (min-width: @screen-xs-min) {
+    background-position-y: 25vw;
+  }
+
+  @media (min-width: @screen-xl-min) {
+    background-image: unset;
+  }
+}
+
+
+.text {
+  color: #000;
+
+  &-color {
+    &-primary {
+      color: @primary-dark-color;
+    }
+
+    &-secondary {
+      color: @secondary-color;
+    }
+
+    &-tertiary {
+      color: @tertiary-color;
+    }
+
+    &-inverse {
+      color: @primary-light-color;
+    }
+
+    &-disabled {
+      color: @primary-light-color;
+    }
+  }
+
+  &-xl {
+    font-size: 13px;
+
+    @media (min-width: @screen-sm-min) {
+      font-size: 20px;
+    }
+  }
+
+  &-lg {
+    font-size: 13px;
+    @media (min-width: @screen-sm-min) {
+      font-size: 18px;
+    }
+  }
+
+  &-md {
+    font-size: 13px;
+    @media (min-width: @screen-sm-min) {
+      font-size: 14px;
+    }
+  }
+
+  &-sm {
+    font-size: 11px;
+    @media (min-width: @screen-sm-min) {
+      font-size: 12px;
+    }
+  }
+
+  &-font {
+    &-primary {
+      font-family: @primary-font-family;
+    }
+
+    &-secondary {
+      font-family: @secondary-font-family;
+    }
+
+    &-tertiary {
+      font-family: @tertiary-font-family;
+    }
+  }
+}

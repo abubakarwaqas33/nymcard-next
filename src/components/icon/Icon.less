@@ -1,0 +1,18 @@
+@import '../../theme/variables.less';
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transition: color 0.3s;
+  }
+  &-secondary {
+    background-color: @secondary-color;
+  }
+  &-circle {
+    border-radius: 50%;
+  }
+}

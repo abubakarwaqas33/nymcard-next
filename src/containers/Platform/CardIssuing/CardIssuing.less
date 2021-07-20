@@ -1,0 +1,247 @@
+@import '../../../theme/index.less';
+
+.card-issuing-top-background-wrapper {
+  position: relative;
+  background: linear-gradient(to bottom, transparent 30%, #fbfbfb 70%, #fbfbfb);
+  @media (min-width: @screen-md-min) {
+    //background: unset;
+  }
+
+  .card-issuing-top-background-image {
+    position: absolute;
+
+    &.desktop {
+      top: 0;
+      right: 0;
+      display: none;
+      @media (min-width: @screen-xs-min) {
+        display: block;
+      }
+      @media (min-width: @screen-xl-min) {
+        top: -120px;
+      }
+    }
+
+    &.mobile {
+      top: 75vw;
+      right: 0;
+      width: 100%;
+      height: auto;
+      @media (min-width: @screen-xs-min) {
+        display: none;
+      }
+    }
+  }
+}
+
+.section.card-issuing-hero {
+  padding-bottom: 95vw;
+  @media (min-width: @screen-xs-min) {
+    padding-bottom: 48px;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-bottom: 140px;
+  }
+}
+
+.nymcard-payment {
+  .title-wrapper {
+    margin-bottom: 48px;
+    @media (min-width: @screen-md-min) {
+      margin-bottom: 70px;
+    }
+  }
+  .nymcard-payment-list {
+    display: grid;
+
+    @media (min-width: @screen-sm-min) {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    @media (min-width: @screen-lg-min) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+  }
+
+  .nymcard-payment-slider {
+    &.swiper-container {
+      max-width: 266px;
+      margin-left: unset;
+      overflow: visible;
+    }
+    .swiper-slide {
+      height: auto;
+    }
+    .card {
+      height: 100%;
+    }
+  }
+}
+
+.frictionless-title {
+  margin-bottom: 16px;
+  color: @primary-light-color;
+  font-family: @primary-font-family;
+}
+
+.frictionless-text {
+  margin-bottom: 47px;
+  color: @primary-light-color;
+  font-size: 15px;
+  font-family: @primary-font-family;
+}
+
+.frictionless-section {
+  .frictionless-picture-mobile {
+    position: absolute;
+    top: 75vw;
+    right: -30vw;
+    width: 120vw;
+    @media (min-width: @screen-xxs-min) {
+      top: 54vw;
+    }
+    @media (min-width: @screen-sm-min) {
+      top: 34vw;
+      right: 0;
+      width: 100%;
+    }
+    @media (min-width: @screen-md-min) {
+      top: 35vw;
+    }
+    .frictionless-image-mobile {
+      g.amazon-card-active {
+        opacity: 0;
+      }
+      g.frictionless-card-1-active {
+        opacity: 0;
+      }
+      g.frictionless-card-2-unactive {
+        opacity: 0;
+      }
+      g.frictionless-card-3-active {
+        opacity: 0;
+      }
+    }
+  }
+
+  .frictionless-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 75vw;
+  }
+
+  .frictionless-accordion-details {
+    padding-bottom: 16px;
+    .text-paragraph:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.animated-frictionless-part {
+  .content-part-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.3;
+    transition: opacity 0.6s;
+    &.active {
+      opacity: 1;
+    }
+    .content-part {
+      width: 50%;
+    }
+  }
+}
+
+.frictionless-list {
+  position: relative;
+  width: 100%;
+  .frictionless-list-item {
+    position: absolute;
+    left: 0;
+    border-bottom: 1px solid @secondary-color;
+  }
+}
+
+.frictionless-image-part {
+  position: absolute;
+  top: 6%;
+  right: 0;
+  width: 43%;
+  overflow-x: hidden;
+  transform: translateX(4vw);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  .frictionless-image {
+    width: 58vw;
+    g,
+    path {
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .amazon-card-active,
+    .frictionless-card-1-active,
+    .frictionless-card-2-active,
+    .frictionless-card-3-active {
+      transform: translate(-7px, 57px);
+      opacity: 0;
+    }
+
+    &.first-step {
+      .frictionless-card-2-active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      .frictionless-card-2-unactive {
+        opacity: 0;
+      }
+    }
+
+    &.second-step {
+      .frictionless-card-3-active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      .frictionless-card-3-unactive {
+        opacity: 0;
+      }
+    }
+    &.third-step {
+      .frictionless-card-1-active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      .frictionless-card-1-unactive {
+        opacity: 0;
+      }
+    }
+    &.fourth-step {
+      .amazon-card-active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      .amazon-card-unactive {
+        opacity: 0;
+      }
+    }
+  }
+  &.bottom {
+    top: 91.8%;
+  }
+  &.fixed {
+    position: fixed;
+    top: 30%;
+    transform: translateX(0);
+    opacity: 1;
+
+    @media (min-width: @screen-xxl-min) {
+      top: 23%;
+    }
+  }
+}

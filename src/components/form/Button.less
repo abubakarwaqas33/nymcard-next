@@ -1,0 +1,158 @@
+//@import '../../index';
+@import '../../theme/index.less';
+@import '~antd/lib/button/style/index';
+
+@button-default-color: @secondary-color;
+@button-default-hover-color: #fc8986;
+@button-default-focus-color: #931f1b;
+@button-disabled-color: #f8c4c3;
+
+@btn-default-color: #fff;
+@btn-ghost-border: transparent;
+@btn-ghost-color: @button-default-color;
+@btn-default-bg: @button-default-color;
+@btn-border-radius-base: 16px;
+@btn-height-base: 32px;
+@btn-padding-horizontal-base: 20px;
+@btn-line-height: 1.5;
+@btn-default-border: none;
+@btn-border-style: none;
+@btn-disable-border: none;
+@btn-text-hover-bg: @button-default-color;
+
+.ant-btn {
+  display: flex;
+  align-items: center;
+  box-shadow: unset;
+  border-color: transparent;
+
+  &:hover {
+    color: @btn-default-color;
+    opacity: 0.85;
+  }
+
+  &:active {
+    background: @button-default-focus-color;
+  }
+
+  &[disabled] {
+    background-color: @button-disabled-color;
+
+    &:hover {
+      background-color: @button-disabled-color;
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    display: none !important;
+  }
+
+  &-lg {
+    border-radius: 86px;
+  }
+
+  &-default,
+  &-primary {
+    justify-content: center;
+
+    &:active {
+      background-color: @button-default-focus-color !important;
+    }
+
+    &:hover {
+      color: @btn-default-color;
+    }
+  }
+
+  &-ghost {
+    padding: 0;
+
+    &:hover {
+      a,
+      .icon-default-shape svg {
+        color: @button-default-color !important;
+      }
+    }
+
+    &:active {
+      background: transparent;
+
+      a,
+      p,
+      .icon-default-shape svg {
+        color: @button-default-focus-color !important;
+      }
+
+      .icon-circle {
+        background-color: @button-default-focus-color !important;
+      }
+    }
+  }
+}
+
+//.ant-btn:hover > a:only-child, .ant-btn:focus > a:only-child {
+//  color: inherit !important;
+//}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: $height/2;
+  cursor: pointer;
+
+  &-link {
+    .text-link {
+      font-size: 17px;
+    }
+  }
+
+  .text {
+    padding: 0 20px;
+  }
+
+  &:hover {
+    background-color: @button-default-hover-color;
+
+    a {
+      color: white;
+    }
+  }
+
+  &:active {
+    color: white;
+    background-color: @button-default-focus-color;
+  }
+
+  &-default {
+    background-color: @secondary-color;
+  }
+
+  &-ghost {
+    background-color: transparent;
+
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &[disabled] {
+    background-color: @button-disabled-color;
+  }
+}
+
+.why-nymcard-style {
+  @media (max-width: 767px) {
+    a,
+    svg {
+      color: #35488f !important;
+    }
+  }
+}
+
+.contact-us-form .ant-btn {
+  background: @button-default-color;
+}

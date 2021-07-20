@@ -1,0 +1,28 @@
+@import '../../theme/variables.less';
+
+@font-family: 'Poppins', sans-serif;
+@button-default-color: @secondary-color;
+@button-default-hover-color: #fc8986;
+@button-main-hover-color: #f37875;
+@button-default-focus-color: #931f1b;
+@button-disabled-color: #f8c4c3;
+@button-focused-color: #1c2030;
+@button-transition-duration: 0.3s;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 14px;
+  background-color: @button-default-color;
+  border-radius: $height/2;
+  transition: background-color @button-transition-duration;
+}

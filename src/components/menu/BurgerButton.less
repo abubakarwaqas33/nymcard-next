@@ -1,0 +1,73 @@
+//@import '../../index';
+
+.burger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 28px;
+  height: 2px;
+  background: @primary-dark-color;
+  cursor: pointer;
+}
+
+.burger-white {
+  .burger-line {
+    background-color: @primary-light-color;
+  }
+}
+
+.burger-line:first-child {
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.burger-line:last-child {
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+
+.burger-line:first-of-type {
+  margin-bottom: 2px;
+}
+
+.burger-button-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.close-white .burger-line {
+  background-color: @primary-light-color;
+}
+
+.burger-button-close .burger-line:first-of-type {
+  margin: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.burger-button-close .burger-line:last-child {
+  -webkit-transform: rotate(-45deg) translate(10px, 10px);
+  -ms-transform: rotate(-45deg) translate(-10px, 10px);
+  transform: rotate(-45deg) translate(-12px, 12px);
+}

@@ -1,0 +1,113 @@
+@import '../../theme/variables.less';
+@import '../../theme/styles.less';
+
+.blog-wrapper {
+  .blog-subtitle {
+    margin-bottom: 13px;
+    color: rgba(45, 54, 92, 0.29);
+    font-size: 10px;
+    font-family: @secondary-font-family;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  .blog-title {
+    margin-bottom: 8px;
+    color: #2d365c;
+    font-size: 40px;
+    font-family: @secondary-font-family;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    @media (min-width: 768px) {
+      font-size: 80px;
+    }
+  }
+
+  .MuiInput-underline::before,
+  .MuiInput-underline::after {
+    border-bottom: 1px solid #2c365a;
+  }
+
+  .MuiInputBase-input {
+    color: #2c365a;
+  }
+
+  .blog-card {
+    min-width: 100%;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 33px;
+    background: #f1f6fb;
+    border-radius: 5px;
+  }
+
+  .card-logo {
+    color: #222f5d;
+    font-weight: 500;
+    font-size: 10px;
+    font-family: @primary-font-family;
+    text-transform: uppercase;
+  }
+
+  .card-date {
+    color: #2d365c;
+    font-weight: 500;
+    font-size: 10px;
+    font-family: @primary-font-family;
+    opacity: 0.5;
+  }
+
+  .card-text {
+    color: #2d365c;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: @secondary-font-family;
+  }
+
+  .blog-pagination {
+    display: flex;
+    justify-content: space-between;
+    color: #6e7799;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: @tertiary-font-family;
+    font-style: normal;
+
+    .ant-pagination {
+      &-item {
+        outline: none;
+        cursor: pointer;
+      }
+
+      &-item a {
+        color: #6e7799;
+      }
+
+      &-item-active a {
+        color: @primary-dark-color;
+      }
+
+      &-disabled {
+        display: none;
+      }
+    }
+
+    .ant-pagination-prev::after {
+      cursor: pointer;
+      content: 'PREV';
+    }
+
+    .ant-pagination-next::before {
+      cursor: pointer;
+      content: 'NEXT';
+    }
+
+    .ant-pagination-prev,
+    .ant-pagination-next {
+      outline: none;
+    }
+  }
+}

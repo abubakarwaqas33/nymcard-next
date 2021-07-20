@@ -1,0 +1,30 @@
+@import '../../theme/variables.less';
+
+.text-link {
+  color: @link-color;
+  text-decoration: none;
+
+  &.text {
+    line-height: 1.5;
+
+    &-sm {
+      font-size: 12px;
+    }
+
+    &-md {
+      font-size: 14px;
+    }
+
+    &-lg {
+      font-size: 17px;
+    }
+  }
+
+  &:hover {
+    color: @secondary-color;
+  }
+
+  &:focus {
+    color: black;
+  }
+}

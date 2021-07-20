@@ -1,0 +1,99 @@
+//@import 'src/index';
+
+.ant-input-inner {
+  .ant-row {
+    flex-direction: column;
+  }
+  .contact-us-input-box {
+    .ant-form-item-label {
+      transform: translateY(28px);
+      transform-origin: left center;
+    }
+  }
+  .ant-form-item {
+    .ant-form-item-label {
+      transition: transform 0.3s;
+    }
+  }
+  &.active {
+    .ant-form-item {
+      .ant-form-item-label {
+        transform: translateY(0) scale(0.8);
+      }
+    }
+  }
+
+  .ant-input {
+    padding: 1px 2px;
+    font-size: 16px;
+    font-family: @tertiary-font-family;
+    background-color: transparent;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none !important;
+
+    &:focus,
+    .ant-input-focused {
+      border-color: @tertiary-color !important;
+    }
+  }
+
+  &.small {
+    .ant-input,
+    .ant-col.ant-form-item-label > label {
+      font-size: 14px;
+    }
+  }
+
+  &.regular {
+    .ant-input,
+    .ant-col.ant-form-item-label > label {
+      font-size: 16px;
+    }
+  }
+
+  &.large {
+    .ant-input,
+    .ant-col.ant-form-item-label > label {
+      font-size: 20px;
+    }
+  }
+}
+
+.ant-input-inner.light .ant-input {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.ant-input-inner.light .ant-col.ant-form-item-label > label {
+  color: #fff;
+}
+
+.ant-input-inner.dark .ant-col.ant-form-item-label > label {
+  color: @primary-dark-color;
+  opacity: 0.8;
+}
+
+.ant-input-inner .ant-form-item-has-error .ant-input {
+  background-color: transparent;
+  border-color: #ff4d4f !important;
+}
+
+.ant-input-inner.dark .ant-input {
+  color: @primary-dark-color;
+  border-bottom: 1px solid rgba(45, 54, 92, 0.4);
+
+  .ant-col.ant-form-item-label {
+    > label {
+      opacity: 0.8;
+    }
+  }
+}
+
+.ant-input-inner .ant-form-item-has-error .ant-input:hover {
+  background-color: transparent;
+}
+
+.ant-input-inner.dark .ant-input:hover {
+  border-color: @primary-dark-color;
+}
