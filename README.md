@@ -2,7 +2,7 @@
 A boilerplate for Reactjs app using nextjs, redux, antd, less.
 
 ## Features
-This boilerplate is updated with:
+This boilerplate is updated with: 
 
 - [React 17x](https://reactjs.org)
 - [Nextjs 10x](https://nextjs.org/)
